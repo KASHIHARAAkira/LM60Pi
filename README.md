@@ -1,16 +1,17 @@
-# LM60Py
+>日本語は下にあります。
+# LM60Pi
 ## Introduction
   This module provides methods for measuring temperature using LM60.
 
 ## Usage
-  You run the following script on LM60Py/ directory.
+  If LM60Pi does not have MCP3008Pi module please run the following script on LM60Pi/ directory.
 
 ```
 git clone MCP3008Pi
 
 ```
 
-  Then you can use LM60Py.
+  Then you can use LM60Pi.
 
 ##method
 
@@ -28,18 +29,61 @@ Temperature value read.
 ```
 #!/usr/bin/env python
 
-from LM60Py import lm60
+from LM60Pi import lm60
 
-temp = lm60.LM60(1,2,0)
+temp = lm60.LM60(0,0,0)
 
 print(temp.read())
 ``` 
 
 ## LICENCE
-Copyright 2017 Akira Kashihara
+  This source code is provided under MIT Licence. The detail is on LICENCE file.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+## Bugs
+  If you finde some bugs of this Module, please create issue on following page.
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+  https://github.com/KASHIHARAAkira/LM60Pi/issues
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. 
+
+>日本語
+## 概要
+  このモジュールはLM60から得た値を気温に変換するモジュールです。
+
+## 使用方法
+  このコードをライブラリは、MCP3008Piが必要です。もしもLM60Piの下に、このモジュールがない場合は以下のscriptをterminalで実行してください。
+
+```
+git clone https://github.com/KASHIHARAAkira/MCP3008Pi
+
+```
+
+## メソッド
+
+1. LM60(bus, device, channel)
+bus : SPIポートの番号です (SPI0 or SPI1)
+device : CSピン（チップセレクタピン）の番号です。
+channel : MCP3008の使用するチャンネルです。
+
+2. read()
+気温を取得します。
+
+
+## サンプルコード
+
+```
+#!/usr/bin/env python
+
+from LM60Pi import lm60
+
+temp = lm60.LM60(0,0,0)
+
+print(temp.read())
+``` 
+
+## ライセンス
+  このソースコードは、MIT Licenceによって提供されています。詳しくはLICENCEファイルを御覧ください。
+
+## バグについて
+　このモジュールのバグを見つけた方は、以下のリンク先でissueの発行をお願いします。
+
+  https://github.com/KASHIHARAAkira/LM60Pi/issues
