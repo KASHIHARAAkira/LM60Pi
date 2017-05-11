@@ -16,9 +16,11 @@ git clone MCP3008Pi
 
 1. LM60(bus, device, channel)
 
-  bus : The number of SPI port (SPI0 or SPI1)
-  device : CS pin number
-  channel : using MCP3008 port
+ - bus : The number of SPI port (SPI0 or SPI1)
+
+ - device : CS pin number
+ 
+ - channel : using MCP3008 port
 
 2. read()
 
@@ -61,9 +63,11 @@ git clone https://github.com/KASHIHARAAkira/MCP3008Pi
 
 1. LM60(bus, device, channel)
 
-  bus : SPIポートの番号です (SPI0 or SPI1)
-  device : CSピン（チップセレクタピン）の番号です。
-  channel : MCP3008の使用するチャンネルです。
+  - bus : SPIポートの番号です (SPI0 or SPI1)
+
+  - device : CSピン（チップセレクタピン）の番号です。
+
+  - channel : MCP3008の使用するチャンネルです。
 
 2. read()
 
