@@ -8,20 +8,21 @@
 
 ```
 git clone MCP3008Pi
-
 ```
 
   Then you can use LM60Pi.
 
-##method
+## method
 
 1. LM60(bus, device, channel)
-bus : The number of SPI port (SPI0 or SPI1)
-device : CS pin number
-channel : using MCP3008 port
+
+  bus : The number of SPI port (SPI0 or SPI1)
+  device : CS pin number
+  channel : using MCP3008 port
 
 2. read()
-Temperature value read.
+
+  Temperature value read.
 
 
 ## Sample Code
@@ -54,18 +55,19 @@ print(temp.read())
 
 ```
 git clone https://github.com/KASHIHARAAkira/MCP3008Pi
-
 ```
 
 ## メソッド
 
 1. LM60(bus, device, channel)
-bus : SPIポートの番号です (SPI0 or SPI1)
-device : CSピン（チップセレクタピン）の番号です。
-channel : MCP3008の使用するチャンネルです。
+
+  bus : SPIポートの番号です (SPI0 or SPI1)
+  device : CSピン（チップセレクタピン）の番号です。
+  channel : MCP3008の使用するチャンネルです。
 
 2. read()
-気温を取得します。
+
+  気温を取得します。
 
 
 ## サンプルコード
